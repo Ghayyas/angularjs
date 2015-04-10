@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/angularjs/angular.js"></script>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+
+            $scope.arra = [];
+            $scope.myValue="";
+            $scope.add= function () {
+                $scope.arra.push($scope.myValue)
+            }
+        });
+
+
+    </script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myCtrl">
+    <ul>
+        <li ng-repeat="arr in arra">{{arr}}{{myView}}</li>
+    </ul>
+    <input type="text" ng-model="myValue">
+    <input type="button" ng-click="add()" value="add">
+
+
+</div>
+
+
+
+</body>
+</html>
