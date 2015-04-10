@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>File Compare</title>
+  <style type="text/css">
+  #page {
+    font-family: sans-serif;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    white-space: nowrap;
+    font-family: monospace;
+    font-size: x-small;
+    vertical-align: top;
+  }
+  td.fileName {
+    background: #E6E6E6;
+    font-family: sans-serif;
+    font-size: small;
+  }
+  td.lineNumber {
+    text-align: right;
+    background: #FFC800;
+  }
+  td.added {
+    background: #BEF0BE;
+  }
+  td.removed {
+    background: #C8C8FF;
+  }
+  td.changed {
+    background: #FFC8C8;
+  }
+  td.equal {
+    background: #FFFFFF;
+  }
+  td.empty {
+    background: #F2F2F2;
+  }
+  </style>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="2" class="filename">index.html&nbsp;(Index)</td>
+      <td colspan="2" class="filename">index.html&nbsp;(Working&nbsp;Tree)</td>
+    </tr>
+      <tr>
+<td class="lineNumber">1</td><td class="equal">&lt;!DOCTYPE&nbsp;html&gt;</td><td class="lineNumber">1</td><td class="equal">&lt;!DOCTYPE&nbsp;html&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">2</td><td class="equal">&lt;html&gt;</td><td class="lineNumber">2</td><td class="equal">&lt;html&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">3</td><td class="equal">&lt;head&nbsp;lang=&quot;en&quot;&gt;</td><td class="lineNumber">3</td><td class="equal">&lt;head&nbsp;lang=&quot;en&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">4</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset=&quot;UTF-8&quot;&gt;</td><td class="lineNumber">4</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;charset=&quot;UTF-8&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">5</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;&lt;/title&gt;</td><td class="lineNumber">5</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;&lt;/title&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">6</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;node_modules/angular/angular.js&quot;&gt;&lt;/script&gt;</td><td class="lineNumber">6</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&nbsp;type=&quot;text/javascript&quot;&nbsp;src=&quot;node_modules/angular/angular.js&quot;&gt;&lt;/script&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">7</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;script&gt;</td><td class="lineNumber">7</td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">8</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&quot;myApp&quot;,[]);</td><td class="lineNumber"></td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">9</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.controller(&quot;myCont&quot;,function($scope){</td><td class="lineNumber"></td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">10</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.name&nbsp;=&nbsp;&quot;my&nbsp;name&quot;</td><td class="lineNumber"></td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">11</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</td><td class="lineNumber"></td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">12</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/script&gt;</td><td class="lineNumber"></td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">13</td><td class="equal">&lt;/head&gt;</td><td class="lineNumber">8</td><td class="equal">&lt;/head&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">14</td><td class="equal">&lt;body&gt;</td><td class="lineNumber">9</td><td class="equal">&lt;body&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="empty"></td><td class="lineNumber">10</td><td class="added">&lt;!--</td>
+      </tr>
+      <tr>
+<td class="lineNumber">15</td><td class="equal">&lt;div&nbsp;ng-app=&quot;myApp&quot;&gt;</td><td class="lineNumber">11</td><td class="equal">&lt;div&nbsp;ng-app=&quot;myApp&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">16</td><td class="equal">&lt;div&nbsp;ng-controller=&quot;myCont&quot;&gt;</td><td class="lineNumber">12</td><td class="equal">&lt;div&nbsp;ng-controller=&quot;myCont&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">17</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;name&quot;&gt;</td><td class="lineNumber">13</td><td class="equal">&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;name&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">18</td><td class="equal">&nbsp;&nbsp;&lt;p&gt;&nbsp;{{name}}&lt;/p&gt;</td><td class="lineNumber">14</td><td class="equal">&nbsp;&nbsp;&lt;p&gt;&nbsp;{{name}}&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">19</td><td class="equal"></td><td class="lineNumber">15</td><td class="equal"></td>
+      </tr>
+      <tr>
+<td class="lineNumber">20</td><td class="equal">&lt;/div&gt;</td><td class="lineNumber">16</td><td class="equal">&lt;/div&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">21</td><td class="equal">&lt;/div&gt;</td><td class="lineNumber">17</td><td class="equal">&lt;/div&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">22</td><td class="changed"></td><td class="lineNumber">18</td><td class="changed">--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">19</td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">20</td><td class="changed">&lt;!--</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">21</td><td class="changed">&lt;div&nbsp;ng-app=&quot;myApp&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">22</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-controller=&quot;myCont&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">23</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;helloto&quot;&nbsp;ng-minlength=&quot;1&quot;&nbsp;ng-maxlength=&quot;15&quot;&gt;&lt;br&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">24</td><td class="changed">--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">25</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--wellcome&nbsp;to&nbsp;ng-bind&nbsp;=&nbsp;{{helloto}}&nbsp;site.--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">26</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&lt;div&nbsp;ng-app=&quot;myApp&quot;&nbsp;ng-init=&quot;countries=[{locale:'en-US',name:'United&nbsp;States'},</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">27</td><td class="changed">&nbsp;{locale:'en-GB',name:'United&nbsp;Kingdom'},</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">28</td><td class="changed">&nbsp;{locale:'en-FR',name:'France'}]&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">29</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;ng-controller=&quot;myCont&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">30</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Enter&nbsp;your&nbsp;Name:&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;helloto&quot;&gt;&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">31</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello&nbsp;&lt;span&nbsp;ng-bind=&quot;helloto&quot;&gt;&lt;/span&gt;!&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">32</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;List&nbsp;of&nbsp;Countries&nbsp;with&nbsp;locale:&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">33</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">34</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;ng-repeat=&quot;country&nbsp;in&nbsp;countries&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">35</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{&nbsp;'Country:&nbsp;'&nbsp;+&nbsp;country.name&nbsp;+&nbsp;',&nbsp;Locale:&nbsp;'&nbsp;+&nbsp;country.locale&nbsp;}}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">36</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">37</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">38</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">39</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">40</td><td class="changed">&lt;!--&lt;div&nbsp;ng-app=&quot;myApp&quot;&nbsp;ng-init=&quot;quantity&nbsp;=&nbsp;1;cost&nbsp;=&nbsp;50;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">41</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;student={firstname:'Ghayyas',lastname:'Mubashir',rollno:2470};&nbsp;marks&nbsp;=[80,90,70,65]&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">42</td><td class="changed">&lt;p&gt;expense&nbsp;on&nbsp;books&nbsp;{{quantity*cost}}&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">43</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Student&nbsp;name:{{student.firstname+&quot;&quot;+student.lastname}}&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">44</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Roll&nbsp;number&nbsp;of&nbsp;student&nbsp;is&nbsp;{{student.rollno}}&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">45</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Marks&nbsp;of&nbsp;studen:{{marks[1]}}&lt;/p&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">46</td><td class="changed">&lt;/div&gt;--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">47</td><td class="changed">&lt;!--&lt;div&nbsp;ng-app=&quot;myApp&quot;&nbsp;ng-controller=&quot;myCont&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">48</td><td class="changed">Enter&nbsp;first&nbsp;name&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;student.firstName&quot;&gt;&lt;br&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">49</td><td class="changed">YOur&nbsp;first&nbsp;name&nbsp;is&nbsp;{{student.firstName}}&lt;br&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">50</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;Enter&nbsp;Last&nbsp;Name:&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;student.lastName&quot;&gt;&lt;br&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">51</td><td class="changed">Your&nbsp;Last&nbsp;Name&nbsp;is&nbsp;{{student.lastName}}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">52</td><td class="changed">&lt;br&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">53</td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">54</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;Enter&nbsp;fees:&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;student.fees&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">55</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;fees:&nbsp;{{student.fees&nbsp;|&nbsp;currency}}&lt;br&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">56</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;Enter&nbsp;subject:&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ng-model=&quot;subjectName&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">57</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;Subject:</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">58</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">59</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;ng-repeat=&quot;subject&nbsp;in&nbsp;student.subjects&nbsp;|&nbsp;filter:&nbsp;subjectName&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">60</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{&nbsp;subject.name&nbsp;+&nbsp;',&nbsp;marks:'&nbsp;+&nbsp;subject.marks&nbsp;}}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">61</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">62</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">63</td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">64</td><td class="changed">&lt;/div&gt;--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">65</td><td class="changed">&lt;!--&lt;script&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">66</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&quot;myApp&quot;,[]);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">67</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;app.controller(&quot;myCont&quot;,function($scope){</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">68</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.student={</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">69</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fname:&nbsp;&quot;Ghayyas&quot;,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">70</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lname:&nbsp;&quot;Mubashir&quot;,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">71</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rollnum:&nbsp;'2470'</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">72</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullName:&nbsp;function(){</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">73</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;stdobj&nbsp;=&nbsp;$scope.student;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">74</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;stdobj.fname+&quot;&quot;+stdobj.lname;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">75</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">76</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">77</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;});</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">78</td><td class="changed">&lt;/script&gt;--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">79</td><td class="changed">&lt;!--&lt;script&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">80</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;app&nbsp;=&nbsp;angular.module(&quot;myApp&quot;,[]);</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">81</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;app.controller(&quot;myCont&quot;,function($scope)&nbsp;{</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">82</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.student&nbsp;=&nbsp;{</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">83</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstName:&nbsp;&quot;Mahesh&quot;,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">84</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastName:&nbsp;&quot;Parashar&quot;,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">85</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullName:&nbsp;function()&nbsp;{</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">86</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;studentObject;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">87</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;studentObject&nbsp;=&nbsp;$scope.student;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">88</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;studentObject.firstName&nbsp;+&nbsp;&quot;&nbsp;&quot;&nbsp;+&nbsp;studentObject.lastName;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">89</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">90</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">91</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">92</td><td class="changed"></td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">93</td><td class="changed">&lt;/script&gt;--&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">94</td><td class="changed">&lt;div&nbsp;ng-app=&quot;&quot;&nbsp;ng-controller=&quot;studentController&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">95</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&nbsp;border=&quot;0&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">96</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Enter&nbsp;first&nbsp;name:&lt;/td&gt;&lt;td&gt;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ngmodel=&quot;student.firstName&quot;&gt;&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">97</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Enter&nbsp;last&nbsp;name:&nbsp;&lt;/td&gt;&lt;td&gt;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ngmodel=&quot;student.lastName&quot;&gt;&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">98</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Enter&nbsp;fees:&nbsp;&lt;/td&gt;&lt;td&gt;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ngmodel=&quot;student.fees&quot;&gt;&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">99</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Enter&nbsp;subject:&nbsp;&lt;/td&gt;&lt;td&gt;&lt;input&nbsp;type=&quot;text&quot;&nbsp;ngmodel=&quot;subjectName&quot;&gt;&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">100</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">101</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;br/&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">102</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&nbsp;border=&quot;0&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">103</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Name&nbsp;in&nbsp;Upper&nbsp;Case:&nbsp;&lt;/td&gt;&lt;td&gt;{{student.fullName()&nbsp;|</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">104</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uppercase}}&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">105</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Name&nbsp;in&nbsp;Lower&nbsp;Case:&nbsp;&lt;/td&gt;&lt;td&gt;{{student.fullName()&nbsp;|</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">106</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lowercase}}&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">107</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;fees:&nbsp;&lt;/td&gt;&lt;td&gt;{{student.fees&nbsp;|&nbsp;currency}}&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">108</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Subject:&lt;/td&gt;&lt;td&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">109</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">110</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;ng-repeat=&quot;subject&nbsp;in&nbsp;student.subjects&nbsp;|&nbsp;filter:&nbsp;subjectName</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">111</td><td class="changed">|orderBy:'marks'&quot;&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">112</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{&nbsp;subject.name&nbsp;+&nbsp;',&nbsp;marks:'&nbsp;+&nbsp;subject.marks&nbsp;}}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">113</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">114</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">115</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;&lt;/tr&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">116</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">117</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;Angular&nbsp;JS&nbsp;Tutorial</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">118</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;28</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">119</td><td class="changed">&lt;/div&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">120</td><td class="changed">&lt;script&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">121</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;studentController($scope)&nbsp;{</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">122</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$scope.student&nbsp;=&nbsp;{</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">123</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;firstName:&nbsp;&quot;Mahesh&quot;,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">124</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastName:&nbsp;&quot;Parashar&quot;,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">125</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fees:500,</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">126</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subjects:[</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">127</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name:'Physics',marks:70},</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">128</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name:'Chemistry',marks:80},</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">129</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name:'Math',marks:65}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">130</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">131</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fullName:&nbsp;function()&nbsp;{</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">132</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;studentObject;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">133</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;studentObject&nbsp;=&nbsp;$scope.student;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">134</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;studentObject.firstName&nbsp;+&nbsp;&quot;&nbsp;&quot;&nbsp;+&nbsp;studentObject.lastName;</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">135</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">136</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">137</td><td class="changed">&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+      </tr>
+      <tr>
+<td class="lineNumber"></td><td class="changed"></td><td class="lineNumber">138</td><td class="changed">&lt;/script&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">23</td><td class="equal">&lt;/body&gt;</td><td class="lineNumber">139</td><td class="equal">&lt;/body&gt;</td>
+      </tr>
+      <tr>
+<td class="lineNumber">24</td><td class="equal">&lt;/html&gt;</td><td class="lineNumber">140</td><td class="equal">&lt;/html&gt;</td>
+      </tr>
+  </table>
+</body>
