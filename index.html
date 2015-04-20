@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script>
+
+        var myapp = angular.module('myApp',[]);
+        myapp.controller('TimeCtrl',function($scope, $timeout) {
+            var count = function () {
+                $scope.clock = Date.now();
+                $timeout(count);
+            };
+
+
+            $timeout(count);
+        })
+
+
+    </script>
+
+</head>
+<body >
+<div ng-app="myApp">
+    <div ng-controller='TimeCtrl'>
+        <p>{{ clock | date:'mediumTime'}}</p>
+    </div>
+    </div>
+</body>
+</html>
